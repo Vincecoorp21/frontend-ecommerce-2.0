@@ -1,16 +1,28 @@
 import './Login.css';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { UserContext } from '../../context/UserContext/UserState';
 import { Form, Input, Button } from 'antd';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const { login } = useContext(UserContext);
+
+  const navigate = useNavigate();
+
   const onFinish = values => {
     login(values);
   };
   const onFinishFailed = errorInfo => {
     console.log('Failed:', errorInfo);
   };
+  useEffect(() => {
+    setTimeout(() => {
+      const foundToken = JSON.parse(localStorage.getItem('token'));
+      if (foundToken) {
+        navigate('/profile');
+      }
+    }, 2000);
+  }, [login]);
   return (
     <div className='container'>
       <Form
