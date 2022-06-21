@@ -1,8 +1,9 @@
-import './Header.css';
+import './Header.scss';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { UserContext } from '../../context/UserContext/UserState';
 import { useNavigate } from 'react-router-dom';
+import { ShoppingCartOutlined } from "@ant-design/icons";
 
 function Header() {
   const { token, logout } = useContext(UserContext);
@@ -48,6 +49,11 @@ function Header() {
           </>
         )}
       </div>
+      <span>
+        <Link to='/cart'>
+          <ShoppingCartOutlined />
+        </Link>
+      </span>
     </nav>
   );
 }

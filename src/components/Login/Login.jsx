@@ -1,4 +1,4 @@
-import './Login.css';
+import './Login.scss';
 import { useContext, useEffect } from 'react';
 import { UserContext } from '../../context/UserContext/UserState';
 import { Form, Input, Button } from 'antd';
