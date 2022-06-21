@@ -5,11 +5,16 @@ const products = (state, action) => {
         ...state,
         products: action.payload.productSectionCategory,
       };
-    case 'ADD_CART':      
+    case 'ADD_CART':
       return {
         ...state,
-        
+
         cart: [action.payload, ...state.cart],
+      };
+    case 'CLEAR_CART':
+      return {
+        ...state,
+        cart: [],
       };
     default:
       return state;

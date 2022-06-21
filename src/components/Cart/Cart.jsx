@@ -1,16 +1,22 @@
 import { useContext } from 'react';
-
-import { ProductContext } from '../../context/ProductContext/ProductState';
+import { OrdersContext } from "../../context/OrdersContext/OrdersState";
+import { ProductContext } from "../../context/ProductContext/ProductState";
 
 const Cart = () => {
-  const { cart } = useContext(ProductContext);
+  const { cart, clearCart } = useContext(ProductContext);
+  const { createOrder } = useContext(OrdersContext);
 
   if (cart.length <= 0) {
     return <span>No tienes ningún producto añadido</span>;
   }
   
+  const createNewOrder = () => {
+    createOrder(cart);
+    clearCart();
+  };
+
   const cartItem = cart.map((cartItem, i) => {
-    // console.log(cartItem.product)
+    
     return (
       <div className='cart' key={i}>
         <span>{cartItem.product}</span>        
@@ -18,8 +24,14 @@ const Cart = () => {
       </div>
     );
   });
-
-  return <div>{cartItem}</div>;
+  
+  return (
+    <div>
+        {cartItem}
+        <button onClick={() => clearCart()}>Clear cart</button>
+        <button onClick={() => createNewOrder()}>Create Order</button>  
+    </div>
+  );
 };
 
 export default Cart;

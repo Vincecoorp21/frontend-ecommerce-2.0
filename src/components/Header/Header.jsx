@@ -25,15 +25,16 @@ function Header() {
             <span>
               <Link to='/'>Home</Link>
             </span>
-            <span onClick={logoutUser}>
-              <Link to='/'>Logout</Link>
+            <span>
+              <Link to='/products'>Products</Link>
             </span>
             <span>
               <Link to='/profile'>Profile</Link>
             </span>
-            <span>
-              <Link to='/products'>Products</Link>
-            </span>
+            <span onClick={logoutUser}>
+              <Link to='/'>Logout</Link>
+            </span>          
+            
           </>
         ) : (
           <>
@@ -41,11 +42,12 @@ function Header() {
               <Link to='/'>Home</Link>
             </span>
             <span>
-              <Link to='/login'>Login</Link>
-            </span>
-            <span>
               <Link to='/products'>Products</Link>
             </span>
+            <span>
+              <Link to='/login'>Login</Link>
+            </span>
+            
           </>
         )}
       </div>

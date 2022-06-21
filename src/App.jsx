@@ -9,12 +9,14 @@ import Home from './components/Home/Home';
 import Products from './components/Products/Products';
 import { ProductProvider } from './context/ProductContext/ProductState';
 import Cart from './components/Cart/Cart';
+import { OrdersProvider } from "./context/OrdersContext/OrdersState";
 
 function App() {
   return (
     <div className='App'>
       <UserProvider>
         <ProductProvider>
+          <OrdersProvider>
           <BrowserRouter>
             <Header />
             <Routes>
@@ -25,6 +27,7 @@ function App() {
               <Route path="/cart" element={<Cart />} />
             </Routes>
           </BrowserRouter>
+          </OrdersProvider>
         </ProductProvider>
       </UserProvider>
     </div>
