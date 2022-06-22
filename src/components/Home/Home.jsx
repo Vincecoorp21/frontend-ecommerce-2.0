@@ -1,9 +1,100 @@
 import React from 'react';
+import './Home.scss';
 
 const Home = () => {
   return (
-    <div>
-      <h1>Hola soy un Home</h1>
+    //
+    // <div className='hero-content'>
+    //   <h1 className='hero-title'>Welcome to My Personal Place</h1>
+    //   <h2 className='hero-subtitle'>
+    //     I'm <span>VinceBC</span>....a Fullstack Web Developer
+    //   </h2>
+    //   <button
+    //     type='button'
+    //     class='hero-button'
+    //     onClick="parent.location='/pages/aboutme.html'"
+    //   >
+    //     Welcome
+    //   </button>
+    // </div>
+    // <div>
+    //   <h1>Hola Home</h1>
+    // </div>
+    <div class='product-collection'>
+      <div class='container'>
+        <div class='product-collection-wrapper'>
+          {/* <!-- product col left --> */}
+          <div class='product-col-left flex'>
+            <div class='product-col-content'>
+              <h2 class='sm-title'>men's shoes</h2>
+              <h2 class='md-title'>men's collection</h2>
+              <p class='text-light'>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Molestiae consequatur facilis eligendi quibusdam voluptatibus
+                exercitationem autem voluptatum, beatae architecto odit,
+                quisquam repellat. Deleniti, architecto ab.
+              </p>
+              <button type='button' class='btn-dark'>
+                Shop now
+              </button>
+            </div>
+          </div>
+
+          {/* <!-- product col right --> */}
+          <div class='product-col-right'>
+            <div class='product-col-r-top flex'>
+              <div class='product-col-content'>
+                <h2 class='sm-title'>women's dresses</h2>
+                <h2 class='md-title'>women's collection</h2>
+                <p class='text-light'>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Molestiae consequatur facilis eligendi quibusdam voluptatibus
+                  exercitationem autem voluptatum, beatae architecto odit,
+                  quisquam repellat. Deleniti, architecto ab.
+                </p>
+                <button type='button' class='btn-dark'>
+                  Shop now
+                </button>
+              </div>
+            </div>
+
+            <div class='product-col-r-bottom'>
+              {/* <!-- left --> */}
+              <div class='flex'>
+                <div class='product-col-content'>
+                  <h2 class='sm-title'>summer sale</h2>
+                  <h2 class='md-title'>Extra 50% Off</h2>
+                  <p class='text-light'>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Molestiae consequatur facilis eligendi quibusdam
+                    voluptatibus exercitationem autem voluptatum, beatae
+                    architecto odit, quisquam repellat. Deleniti, architecto ab.
+                  </p>
+                  <button type='button' class='btn-dark'>
+                    Shop now
+                  </button>
+                </div>
+              </div>
+              {/* <!-- right --> */}
+              <div class='flex'>
+                <div class='product-col-content'>
+                  <h2 class='sm-title'>shoes</h2>
+                  <h2 class='md-title'>best sellers</h2>
+                  <p class='text-light'>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Molestiae consequatur facilis eligendi quibusdam
+                    voluptatibus exercitationem autem voluptatum, beatae
+                    architecto odit, quisquam repellat. Deleniti, architecto ab.
+                  </p>
+                  <button type='button' class='btn-dark'>
+                    Shop now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
