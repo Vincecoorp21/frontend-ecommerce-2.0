@@ -7,7 +7,7 @@ const initialState = {
   token: token ? token : null,
   user: null,
 };
-const API_URL = 'http://localhost:3000';
+const API_URL = 'http://localhost:8000';
 export const UserContext = createContext(initialState);
 
 export const UserProvider = ({ children }) => {
@@ -54,7 +54,15 @@ export const UserProvider = ({ children }) => {
       localStorage.removeItem('token');
     }
   };
-
+  const register = async user => {
+    console.log(user);
+    const res = await axios.post(API_URL + '/users', user);
+    console.log(res);
+    dispatch({
+      type: 'REGISTER',
+      payload: res.data,
+    });
+  };
   return (
     <UserContext.Provider
       value={{
@@ -63,6 +71,8 @@ export const UserProvider = ({ children }) => {
         login,
         getUserInfo,
         logout,
+        register,
+        message: state.message,
       }}
     >
       {children}

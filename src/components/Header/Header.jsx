@@ -56,6 +56,11 @@ function Header() {
               </Link>
             </span>
             <span>
+              <Link className='btn-head' to='/register'>
+                Register
+              </Link>
+            </span>
+            <span>
               <Link className='btn-head' to='/login'>
                 Login
               </Link>

@@ -16,9 +16,20 @@ const users = (state, action) => {
         user: null,
         token: null,
       };
+    case 'REGISTER':
+      return {
+        ...state,
+        //user: action.payload.user,
+        message: action.payload.message,
+      };
     default:
       return state;
+<<<<<<< HEAD
   }  
+=======
+  }
+  console.log(action.payload);
+>>>>>>> origin/vince-test
 };
 
 export default users;

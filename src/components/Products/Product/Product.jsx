@@ -3,7 +3,7 @@ import React, { useContext, useEffect } from 'react';
 import { ProductContext } from '../../../context/ProductContext/ProductState';
 
 import './Product.scss';
-const URL_IMAGE = 'http://localhost:3000';
+const URL_IMAGE = 'http://localhost:8000';
 
 const Product = () => {
   const { products, getProducts, addCart, cart } = useContext(ProductContext);
