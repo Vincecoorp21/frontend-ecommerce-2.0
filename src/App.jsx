@@ -11,6 +11,7 @@ import { ProductProvider } from './context/ProductContext/ProductState';
 import Cart from './components/Cart/Cart';
 import { OrdersProvider } from './context/OrdersContext/OrdersState';
 import 'bootswatch/dist/morph/bootstrap.min.css';
+import Register from './components/Register/Register';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/login' element={<Login />} />
+                <Route path='/register' element={<Register />} />
                 <Route path='/profile' element={<Profile />} />
                 <Route path='/products' element={<Products />} />
                 <Route path='/cart' element={<Cart />} />

@@ -16,10 +16,16 @@ const users = (state, action) => {
         user: null,
         token: null,
       };
+    case 'REGISTER':
+      return {
+        ...state,
+        //user: action.payload.user,
+        message: action.payload.message,
+      };
     default:
       return state;
   }
-  console.log(action.payload)
+  console.log(action.payload);
 };
 
 export default users;
