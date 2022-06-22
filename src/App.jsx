@@ -9,8 +9,8 @@ import Home from './components/Home/Home';
 import Products from './components/Products/Products';
 import { ProductProvider } from './context/ProductContext/ProductState';
 import Cart from './components/Cart/Cart';
-import { OrdersProvider } from "./context/OrdersContext/OrdersState";
-// import 'bootswatch/dist/morph/bootstrap.min.css';
+import { OrdersProvider } from './context/OrdersContext/OrdersState';
+import 'bootswatch/dist/morph/bootstrap.min.css';
 
 function App() {
   return (
@@ -18,16 +18,16 @@ function App() {
       <UserProvider>
         <ProductProvider>
           <OrdersProvider>
-          <BrowserRouter>
-            <Header />
-            <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/login' element={<Login />} />
-              <Route path='/profile' element={<Profile />} />
-              <Route path='/products' element={<Products />} />
-              <Route path="/cart" element={<Cart />} />
-            </Routes>
-          </BrowserRouter>
+            <BrowserRouter>
+              <Header />
+              <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/login' element={<Login />} />
+                <Route path='/profile' element={<Profile />} />
+                <Route path='/products' element={<Products />} />
+                <Route path='/cart' element={<Cart />} />
+              </Routes>
+            </BrowserRouter>
           </OrdersProvider>
         </ProductProvider>
       </UserProvider>
