@@ -18,11 +18,12 @@ const Profile = () => {
     console.log(order.Products);
     return (
       <div key={i}>
-        <span>La orden num {order.order_num} se compone de:</span>
+        <span>Orden num {order.order_num}:</span>
         <br />
         <div>
+          <br />
           {order.Products.map(product => {
-            console.log(product);
+            // console.log(product);
             return product.product;
           })}
         </div>
@@ -36,22 +37,6 @@ const Profile = () => {
   console.log(listOrders);
 
   return (
-    // {/* <div className='profile-card'>
-    //   <div className='tarjeta'>
-    //     <img src='...' class='card-img-top' alt='...' />
-    //     <div class='card-body'>
-    //       <h5 class='card-title'>Card title</h5>
-    //       <p class='card-text'>
-    //         Some quick example text to build on the card title and make up the
-    //         bulk of the card's content.
-    //       </p>
-    //       <a href='#' class='btn btn-primary'>
-    //         Go somewhere
-    //       </a>
-    //     </div>
-    //   </div>
-    // </div> */}
-
     <>
       <div class='card'>
         <div
@@ -81,8 +66,9 @@ const Profile = () => {
           <h2 class='name'>{user.name}</h2>
           <h4 class='job-title'>{user.email}</h4>
           <div class='bio'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Dignissimos, aperiam.
+            {listOrders}
+            {/* Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Dignissimos, aperiam. */}
           </div>
           <div class='social-accounts'>
             <a href='#'>
@@ -127,7 +113,7 @@ const Profile = () => {
         </div>
       </div>
 
-      <div>{listOrders}</div>
+      {/* <div>{listOrders}</div> */}
     </>
   );
 };
