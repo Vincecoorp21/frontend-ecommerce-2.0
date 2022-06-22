@@ -7,7 +7,7 @@ const initialState = {
   token: token ? token : null,
   user: null,
 };
-const API_URL = 'http://localhost:3000';
+const API_URL = 'http://localhost:8000';
 export const UserContext = createContext(initialState);
 
 export const UserProvider = ({ children }) => {

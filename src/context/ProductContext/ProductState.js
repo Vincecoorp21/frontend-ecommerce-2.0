@@ -12,7 +12,7 @@ export const ProductContext = createContext(initialState);
 
 export const ProductProvider = ({ children }) => {
   const [state, dispatch] = useReducer(ProductReducer, initialState);
-  const API_URL = 'http://localhost:3000';
+  const API_URL = 'http://localhost:8000';
   const getProducts = async () => {
     const res = await axios.get(API_URL + '/products/productcategorysection');
 
@@ -39,7 +39,7 @@ export const ProductProvider = ({ children }) => {
         cart: state.cart,
         getProducts,
         addCart,
-        clearCart
+        clearCart,
       }}
     >
       {children}
