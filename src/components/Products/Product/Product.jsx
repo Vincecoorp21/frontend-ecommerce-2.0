@@ -10,11 +10,11 @@ const Product = () => {
   useEffect(() => {
     getProducts();
   }, []);
-  console.log(cart)
+  
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart]);
-  console.log(cart)
+  
   const product = products.map(product => {
     // console.log(product);
     return (

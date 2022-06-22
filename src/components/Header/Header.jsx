@@ -17,7 +17,7 @@ function Header() {
     }, 2000);
   };
   return (
-    <nav className='header'>
+    <nav className='navbar navbar-expand-lg navbar-dark bg-primary'>
       <span>Tienda Online</span>
       <div>
         {token ? (
@@ -60,3 +60,7 @@ function Header() {
   );
 }
 export default Header;
+
+
+
+
