@@ -1,28 +1,40 @@
 import { useContext, useEffect } from 'react';
-import { OrdersContext } from '../../context/OrdersContext/OrdersState';
+// import { OrdersContext } from '../../context/OrdersContext/OrdersState';
 import { UserContext } from '../../context/UserContext/UserState';
 
 import './Profile.scss';
 const Profile = () => {
   const { getUserInfo, user, orderproduct } = useContext(UserContext);
-  const { order, getOrder } = useContext(OrdersContext);
+  // const { order, getOrder } = useContext(OrdersContext);
   // console.log(orderproduct);
   useEffect(() => {
     getUserInfo();
-    getOrder();
   }, []);
-  const orders = order.map(el => {
-    // console.log(orderproduct);
-    return (
-      <div key={el.id}>
-        <span>{el.product}</span>
-        <span>{el.price}</span>
-      </div>
-    );
-  });
   if (!user) {
     return <span>Cargando...</span>;
   }
+  console.log(user.Order);
+  const listOrders = user.Orders.map((order, i) => {
+    console.log(order.Products);
+    return (
+      <div key={i}>
+        <span>La orden num {order.order_num} se compone de:</span>
+        <br />
+        <div>
+          {order.Products.map(product => {
+            console.log(product);
+            return product.product;
+          })}
+        </div>
+        {/* <span>Nombre del producto: {product.product}</span> */}
+        <br />
+        {/* <span>Descripción: {product.sectionId}</span> */}
+        <br />
+      </div>
+    );
+  });
+  console.log(listOrders);
+
   return (
     // {/* <div className='profile-card'>
     //   <div className='tarjeta'>
@@ -115,7 +127,7 @@ const Profile = () => {
         </div>
       </div>
 
-      <div>{orderproduct.data}</div>
+      <div>{listOrders}</div>
     </>
   );
 };
