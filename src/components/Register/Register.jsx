@@ -52,7 +52,14 @@ function Register() {
       <Form.Item
         label='Email'
         name='email'
-        rules={[{ required: true, message: 'Please input your email!' }]}
+        rules={[
+          {
+            required: true,
+            message: 'Please input your email!',
+            pattern: new RegExp('/S+@S+.S+/'),
+            message: 'Enter a valid email address!',
+          },
+        ]}
       >
         <Input />
       </Form.Item>
