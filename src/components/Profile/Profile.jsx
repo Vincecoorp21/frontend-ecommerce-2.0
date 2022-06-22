@@ -17,8 +17,8 @@ const Profile = () => {
   const listOrders = user.Orders.map((order, i) => {
     console.log(order.Products);
     return (
-      <div key={i}>
-        <span>Orden num {order.order_num}:</span>
+      <div className='order-top' key={i}>
+        <span className='order-title'>Orden num {order.order_num}:</span>
         <br />
         <div>
           <br />
