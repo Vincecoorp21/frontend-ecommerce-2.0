@@ -56,7 +56,7 @@ function Register() {
           {
             required: true,
             message: 'Please input your email!',
-            pattern: new RegExp('/S+@S+.S+/'),
+            // pattern: new RegExp('/S+@S+.S+/'),
             message: 'Enter a valid email address!',
           },
         ]}
