@@ -25,7 +25,6 @@ const users = (state, action) => {
     default:
       return state;
   }
-  console.log(action.payload);
 };
 
 export default users;

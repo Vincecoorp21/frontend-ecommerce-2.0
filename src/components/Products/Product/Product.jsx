@@ -14,9 +14,9 @@ const Product = () => {
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart]);
-  console.log(cart);
+  console.log('cart', cart);
   const product = products.map(product => {
-    // console.log(product);
+    console.log(product.Category.category);
     return (
       // <article className='projects'>
       //   <div key={product.id} className='product-card'>
@@ -64,7 +64,7 @@ const Product = () => {
 
         <div className='product-info'>
           <div className='product-info-top'>
-            <h2 className='sm-title'>lifestyle</h2>
+            <h2 className='sm-title'>{product.Category.category}</h2>
             <div className='rating'>
               <span>
                 <i className='fas fa-star'></i>
@@ -86,7 +86,7 @@ const Product = () => {
           <a href='#' className='product-name'>
             {product.product}
           </a>
-          <p className='product-price'>$ 150.00</p>
+          <p className='product-price'>{product.oldprice}</p>
           <p className='product-price'>{product.price}</p>
         </div>
 
