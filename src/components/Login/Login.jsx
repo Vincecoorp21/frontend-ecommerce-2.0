@@ -26,6 +26,7 @@ function Login() {
   return (
     <div className='container'>
       <Form
+        className='card_form'
         name='basic'
         labelCol={{ span: 8 }}
         wrapperCol={{ span: 16 }}
