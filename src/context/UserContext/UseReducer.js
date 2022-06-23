@@ -24,12 +24,7 @@ const users = (state, action) => {
       };
     default:
       return state;
-<<<<<<< HEAD
   }  
-=======
-  }
-  console.log(action.payload);
->>>>>>> origin/vince-test
 };
 
 export default users;

@@ -1,25 +1,25 @@
  import { useContext, useEffect } from 'react';
-import { OrdersContext } from '../../context/OrdersContext/OrdersState';
+// import { OrdersContext } from '../../context/OrdersContext/OrdersState';
 import { UserContext } from '../../context/UserContext/UserState';
 
 import './Profile.scss';
 const Profile = () => {
   const { getUserInfo, user, orderproduct } = useContext(UserContext);
-  const { order, getOrder } = useContext(OrdersContext);
+  // const { order, getOrder } = useContext(OrdersContext);
   // console.log(orderproduct);
   useEffect(() => {
     getUserInfo();
-    getOrder();
+    // getOrder();
   }, []);
-  const orders = order.map(el => {
-    // console.log(orderproduct);
-    return (
-      <div key={el.id}>
-        <span>{el.product}</span>
-        <span>{el.price}</span>
-      </div>
-    );
-  });
+  // const orders = order.map(el => {
+  //   console.log(orderproduct);
+  //   return (
+  //     <div key={el.id}>
+  //       <span>{el.product}</span>
+  //       <span>{el.price}</span>
+  //     </div>
+  //   );
+  // });
   if (!user) {
     return <span>Cargando...</span>;
   }
