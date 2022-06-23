@@ -24,7 +24,13 @@ const Profile = () => {
           <br />
           {order.Products.map(product => {
             // console.log(product);
-            return product.product;
+            return (
+              <>
+                <ul>
+                  <li>{product.product}</li>
+                </ul>
+              </>
+            );
           })}
         </div>
         {/* <span>Nombre del producto: {product.product}</span> */}
