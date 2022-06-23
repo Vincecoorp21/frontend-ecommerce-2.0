@@ -24,12 +24,7 @@ const users = (state, action) => {
       };
     default:
       return state;
-<<<<<<< HEAD
   }
-  console.log(action.payload);
-=======
-  }  
->>>>>>> 678a2e26b257a9400b81181ba862d5461d8f7c78
 };
 
 export default users;
