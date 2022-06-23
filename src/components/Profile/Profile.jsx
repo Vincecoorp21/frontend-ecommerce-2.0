@@ -9,7 +9,7 @@ const Profile = () => {
   // console.log(orderproduct);
   useEffect(() => {
     getUserInfo();
-    // getOrder();
+    
   }, []);
   // const orders = order.map(el => {
   //   console.log(orderproduct);
@@ -22,8 +22,33 @@ const Profile = () => {
   // });
   if (!user) {
     return <span>Cargando...</span>;
-  }
-  return (
+  }  
+  const listOrders = user.Orders.map((order, i) => {
+    console.log(order.Products);
+    return (
+      <div className='order-top' key={i}>
+        <span className='order-title'>Orden num {order.order_num}:</span>
+        <br />
+        <div>
+          <br />
+          {order.Products.map(product => {
+            console.log(product);
+            return (
+              <>
+                <ul>
+                  <li>{product.product}</li>
+                </ul>
+              </>
+            );
+          })}
+        </div>
+        {/* <span>Nombre del producto: {product.product}</span> */}
+        <br />
+        {/* <span>Descripción: {product.sectionId}</span> */}
+        <br />
+      </div>
+    );
+  });
     // {/* <div className='profile-card'>
     //   <div className='tarjeta'>
     //     <img src='...' class='card-img-top' alt='...' />
@@ -39,7 +64,7 @@ const Profile = () => {
     //     </div>
     //   </div>
     // </div> */}
-
+return(
     <>
       <div class='card'>
         <div
@@ -115,7 +140,7 @@ const Profile = () => {
         </div>
       </div>
 
-      <div>{orderproduct.data}</div>
+      {/* <div>{orderproduct.data}</div> */}
     </>
   );
 };
