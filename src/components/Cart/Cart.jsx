@@ -22,19 +22,30 @@ const Cart = () => {
     const pic = cartItem2['image_path'];
     return (
       <>
-        <div class='tarjeta'></div>
-        <img className='pic-cart' src={URL_IMAGE + pic} alt='' />
-        <p>{cartItem2.product}</p>
-        <p>{cartItem2.price.toFixed(2)} €</p>
+        <div className='cart' key={i}>
+          <span>
+            <img className='pic-cart' src={URL_IMAGE + pic} alt='' />
+          </span>
+          <span>{cartItem2.product}</span>
+          <span>{cartItem2.price.toFixed(2)} €</span>
+        </div>
       </>
     );
   });
   // console.log(cartItem);
   return (
-    <div className='contenedor'>
+    <div className='global'>
+      <h3>Shopping Cart</h3>
       {cartItem}
-      <button onClick={() => clearCart()}>Clear cart</button>
-      <button onClick={() => createNewOrder()}>Create Order</button>
+
+      <div className='btn-cont'>
+        <button className='button-cart' onClick={() => clearCart()}>
+          Clear cart
+        </button>
+        <button className='button-cart' onClick={() => createNewOrder()}>
+          Create Order
+        </button>
+      </div>
     </div>
   );
 };

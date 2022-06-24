@@ -9,11 +9,33 @@ $font-primary: Montserrat;
   padding: 0;
   box-sizing: border-box;
 }
-.contenedor {
-  display: flex;
-}
+// .contenedor {
+//   display: flex;
+// }
 
 .pic-cart {
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
+}
+.global {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+  gap: 3rem;
+  background-color: #ededed;
+  padding: 20px;
+}
+.cart {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+}
+.button-cart {
+  width: 100px;
+}
+.btn-cont {
+  display: flex;
+  gap: 10px;
 }
