@@ -1,8 +1,8 @@
 import { useContext, useEffect } from 'react';
 // import { OrdersContext } from '../../context/OrdersContext/OrdersState';
 import { UserContext } from '../../context/UserContext/UserState';
-
 import './Profile.scss';
+const URL_IMAGE = 'http://localhost:8000';
 const Profile = () => {
   const { getUserInfo, user, orderproduct } = useContext(UserContext);
   // const { order, getOrder } = useContext(OrdersContext);
@@ -15,15 +15,15 @@ const Profile = () => {
   }
   console.log(user.Order);
   const listOrders = user.Orders.map((order, i) => {
-    console.log(order.Products);
+    console.info(order);
     return (
       <div className='order-top' key={i}>
-        <span className='order-title'>Orden num {order.order_num}:</span>
+        <span className='order-title'>Orden num {order.id}:</span>
         <br />
         <div>
           <br />
           {order.Products.map(product => {
-            // console.log(product);
+            console.log(product);
             return (
               <>
                 <ul>
@@ -50,6 +50,7 @@ const Profile = () => {
           styler='background-image: url(https://res.cloudinary.com/dj14cmwoz/image/upload/v1491077482/profile-card/images/profile-picture.png)'
         >
           <div class='card-header-bar'>
+          <img src={URL_IMAGE + user.image_path}/>
             <a href='#' class='btn-message'>
               <span class='sr-only'>Message</span>
             </a>
@@ -62,19 +63,18 @@ const Profile = () => {
             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 200'>
               <path class='polygon' d='M-20,200,1000,0V200Z' />
             </svg>
+             
             <a href='#' class='btn-follow'>
               <span class='sr-only'>Follow</span>
             </a>
           </div>
         </div>
-
+        
         <div class='card-body'>
           <h2 class='name'>{user.name}</h2>
           <h4 class='job-title'>{user.email}</h4>
           <div class='bio'>
-            {listOrders}
-            {/* Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Dignissimos, aperiam. */}
+            {listOrders}            
           </div>
           <div class='social-accounts'>
             <a href='#'>
@@ -117,6 +117,7 @@ const Profile = () => {
             </div>
           </div>
         </div>
+        
       </div>
 
       {/* <div>{listOrders}</div> */}
