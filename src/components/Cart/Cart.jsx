@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { OrdersContext } from '../../context/OrdersContext/OrdersState';
 import { ProductContext } from '../../context/ProductContext/ProductState';
 import './Cart.scss';
+import { DeleteOutlined } from '@ant-design/icons';
 
 const Cart = () => {
   const { cart, clearCart } = useContext(ProductContext);
@@ -28,6 +29,11 @@ const Cart = () => {
           </span>
           <span>{cartItem2.product}</span>
           <span>{cartItem2.price.toFixed(2)} €</span>
+          <span>
+            <button className='remove-item'>
+              <DeleteOutlined />
+            </button>
+          </span>
         </div>
       </>
     );
@@ -37,7 +43,6 @@ const Cart = () => {
     <div className='global'>
       <h3>Shopping Cart</h3>
       {cartItem}
-
       <div className='btn-cont'>
         <button className='button-cart' onClick={() => clearCart()}>
           Clear cart

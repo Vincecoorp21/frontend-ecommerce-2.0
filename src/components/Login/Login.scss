@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+$primary-color: rgb(196, 221, 255);
+$button-primary: #241744;
+$font-primary: Montserrat;
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +11,52 @@
 .container {
   display: flex;
   justify-content: center;
-
+  align-items: center;
   margin-top: 2rem;
+  padding: 80px;
 }
+.login-title {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.card_form {
+  background-color: cornsilk;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.inside_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5em;
+}
+label {
+}
+.input {
+}
+
+// .btn-login {
+//   cursor: pointer;
+//   border: none;
+
+//   text-align: center;
+//   height: 50px;
+//   width: 100px;
+//   background: #241744;
+//   color: red;
+//   border-radius: 100px;
+
+//   font-weight: 600;
+//   transition: 0.3s ease all;
+// }
