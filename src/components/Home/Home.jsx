@@ -72,39 +72,19 @@ const Home = () => {
                 </button>
               </div>
             </div>
-
-            <div class='product-col-r-bottom'>
-              {/* <!-- left --> */}
-              <div class='flex'>
-                <div class='product-col-content'>
-                  <h2 class='sm-title'>summer sale</h2>
-                  <h2 class='md-title'>Extra 50% Off</h2>
-                  <p class='text-light'>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Molestiae consequatur facilis eligendi quibusdam
-                    voluptatibus exercitationem autem voluptatum, beatae
-                    architecto odit, quisquam repellat. Deleniti, architecto ab.
-                  </p>
-                  <button type='button' class='btn-dark'>
-                    Shop now
-                  </button>
-                </div>
-              </div>
-              {/* <!-- right --> */}
-              <div class='flex'>
-                <div class='product-col-content'>
-                  <h2 class='sm-title'>shoes</h2>
-                  <h2 class='md-title'>best sellers</h2>
-                  <p class='text-light'>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Molestiae consequatur facilis eligendi quibusdam
-                    voluptatibus exercitationem autem voluptatum, beatae
-                    architecto odit, quisquam repellat. Deleniti, architecto ab.
-                  </p>
-                  <button type='button' class='btn-dark'>
-                    Shop now
-                  </button>
-                </div>
+            <div class='product-col-r-top3 flex'>
+              <div class='product-col-content'>
+                <h2 class='sm-title'>Wereables</h2>
+                <h2 class='md-title'>Wereables</h2>
+                <p class='text-light'>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Molestiae consequatur facilis eligendi quibusdam voluptatibus
+                  exercitationem autem voluptatum, beatae architecto odit,
+                  quisquam repellat. Deleniti, architecto ab.
+                </p>
+                <button type='button' class='btn-dark'>
+                  Shop now
+                </button>
               </div>
             </div>
           </div>
