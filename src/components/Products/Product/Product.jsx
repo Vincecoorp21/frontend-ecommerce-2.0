@@ -35,25 +35,6 @@ const Product = () => {
 
   const product = products.map(product => {
     return (
-      // <article className='projects'>
-      //   <div key={product.id} className='product-card'>
-      //     <div>
-      //       <img
-      //         src={URL_IMAGE + product.image_path}
-      //         className='poster'
-      //         alt='...'
-      //       />
-      //     </div>
-      //     <div className='card-price'>
-      //       <h5 className='card-title'>{product.product}</h5>
-      //       <p>{product.price} €</p>
-      //     </div>
-      //     <div className='card-btn'>
-      //       <button onClick={() => addCart(product)}>Add Cart</button>
-      //     </div>
-      //   </div>
-      // </article>
-
       <div className='product'>
         <div className='product-content'>
           <div className='product-img'>
