@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.formulario-cont {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.form-register {
+  padding: 4em;
+  background: #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  max-width: 400px;
+  height: 70%;
+  margin: 5em 0;
+}
+.btn-login-form {
+  height: 40px;
+  width: 80px;
+  background-color: #241744;
+  color: #fff;
+  border-radius: 100px;
+  font-family: "'Montserrat";
+  font-weight: 600;
+  transition: 0.3s ease all;
+  font-size: 12px;
+  text-align: center;
+}
+.prueba {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

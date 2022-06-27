@@ -3,16 +3,17 @@ import { ProductContext } from '../../../context/ProductContext/ProductState';
 import { Button, Modal } from 'antd';
 import { useState } from 'react';
 import './Product.scss';
-import Reviews from '../../Reviews/Reviews'
+import Reviews from '../../Reviews/Reviews';
 
 const URL_IMAGE = 'http://localhost:8000';
 
 const Product = () => {
-  const { products, getProducts, addCart, cart, getProductById } = useContext(ProductContext);
+  const { products, getProducts, addCart, cart, getProductById } =
+    useContext(ProductContext);
 
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const  showModal = async (id) => {
-    await getProductById(id);    
+  const showModal = async id => {
+    await getProductById(id);
     setIsModalVisible(true);
   };
 
@@ -25,16 +26,14 @@ const Product = () => {
   };
 
   useEffect(() => {
-    getProducts();    
+    getProducts();
   }, []);
-  
-  
+
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart]);
-  
+
   const product = products.map(product => {
-    
     return (
       // <article className='projects'>
       //   <div key={product.id} className='product-card'>
@@ -55,31 +54,32 @@ const Product = () => {
       //   </div>
       // </article>
 
-  
-  
-  
       <div className='product'>
         <div className='product-content'>
-          <div class='product-img'>
+          <div className='product-img'>
             <img src={URL_IMAGE + product.image_path} alt='product image' />
           </div>
-          <div class='product-btns'>
+          <div className='product-btns'>
             <button
               type='button'
-              class='btn-cart'
+              className='btn-cart'
               onClick={() => addCart(product)}
             >
               add to cart
               <span>
-                <i class='fas fa-plus'></i>
+                <i className='fas fa-plus'></i>
               </span>
             </button>
-            <Button type="primary" class='btn-buy' onClick={()=>showModal(product.id)}>
+            <Button
+              type='primary'
+              className='btn-cart'
+              onClick={() => showModal(product.id)}
+            >
               Reviews
               <span>
-                <i class='fas fa-shopping-cart'></i>
+                <i className='fas fa-shopping-cart'></i>
               </span>
-            </Button>            
+            </Button>
           </div>
         </div>
 
@@ -117,11 +117,16 @@ const Product = () => {
       </div>
     );
   });
-  
+
   return (
     <>
       <div className='product-items'>{product}</div>
-      <Modal title="Reviews" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>       
+      <Modal
+        title='Reviews'
+        visible={isModalVisible}
+        onOk={handleOk}
+        onCancel={handleCancel}
+      >
         <Reviews />
       </Modal>
     </>

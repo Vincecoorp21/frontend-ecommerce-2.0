@@ -3,60 +3,38 @@
 $primary-color: rgb(196, 221, 255);
 $button-primary: #241744;
 $font-primary: Montserrat;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.container {
+
+.formulario-cont {
+  padding: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-  padding: 80px;
+  height: 85vh;
 }
-.login-title {
-  text-align: center;
-  padding: 10px;
-  margin-bottom: 20px;
-}
-.card_form {
-  background-color: cornsilk;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  height: 50%;
-  transform: translate(-50%, -50%);
+.form-register {
+  padding: 4em;
   background: #ffffff;
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
+  max-width: 400px;
+  height: 50%;
+  margin: 5em 0;
 }
-
-.inside_form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5em;
+.btn-login-form {
+  height: 40px;
+  width: 80px;
+  background-color: #241744;
+  color: #fff;
+  border-radius: 100px;
+  font-family: "'Montserrat";
+  font-weight: 600;
+  transition: 0.3s ease all;
+  font-size: 12px;
+  text-align: center;
 }
-label {
-}
-.input {
-}
-
-// .btn-login {
-//   cursor: pointer;
-//   border: none;
-
-//   text-align: center;
-//   height: 50px;
-//   width: 100px;
-//   background: #241744;
-//   color: red;
-//   border-radius: 100px;
-
-//   font-weight: 600;
-//   transition: 0.3s ease all;
-// }
