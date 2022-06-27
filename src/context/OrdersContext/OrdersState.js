@@ -45,8 +45,7 @@ export const OrdersProvider = ({ children }) => {
       dispatch({
         type: 'GET_ORDERS',
         payload: res.data.ordersProduct,
-      });
-      console.log('soy la API', res.data.ordersProduct);
+      });      
     } catch (error) {}
   };
 

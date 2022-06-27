@@ -12,6 +12,7 @@ import Cart from './components/Cart/Cart';
 import { OrdersProvider } from './context/OrdersContext/OrdersState';
 import 'bootswatch/dist/morph/bootstrap.min.css';
 import Register from './components/Register/Register';
+import { ReviewsProvider } from './context/ReviewsContext/ReviewsState';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <UserProvider>
         <ProductProvider>
           <OrdersProvider>
+            <ReviewsProvider>
             <BrowserRouter>
               <Header />
               <Routes>
@@ -27,9 +29,10 @@ function App() {
                 <Route path='/register' element={<Register />} />
                 <Route path='/profile' element={<Profile />} />
                 <Route path='/products' element={<Products />} />
-                <Route path='/cart' element={<Cart />} />
+                <Route path='/cart' element={<Cart />} />                
               </Routes>
             </BrowserRouter>
+            </ReviewsProvider>
           </OrdersProvider>
         </ProductProvider>
       </UserProvider>

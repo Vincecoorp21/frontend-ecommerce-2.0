@@ -1,42 +1,42 @@
 import React, { useContext, useEffect } from 'react';
-// import { GlobalContext } from '../../Context/GlobalState';
 import { ProductContext } from '../../../context/ProductContext/ProductState';
-
+import { Button, Modal } from 'antd';
+import { useState } from 'react';
 import './Product.scss';
+import Reviews from '../../Reviews/Reviews'
+
 const URL_IMAGE = 'http://localhost:8000';
 
 const Product = () => {
-  const { products, getProducts, addCart, cart } = useContext(ProductContext);
+  const { products, getProducts, addCart, cart, getProductById } = useContext(ProductContext);
+
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const showModal = (id) => {
+    getProductById(id);    
+    setIsModalVisible(true);
+  };
+
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
   useEffect(() => {
-    getProducts();
+    getProducts();    
   }, []);
-  console.log(cart);
+  
+  
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart]);
-  console.log(cart);
-  const product = products.map(product => {
-    // console.log(product);
-    return (
-      // <article className='projects'>
-      //   <div key={product.id} className='product-card'>
-      //     <div>
-      //       <img
-      //         src={URL_IMAGE + product.image_path}
-      //         className='poster'
-      //         alt='...'
-      //       />
-      //     </div>
-      //     <div className='card-price'>
-      //       <h5 className='card-title'>{product.product}</h5>
-      //       <p>{product.price} €</p>
-      //     </div>
-      //     <div className='card-btn'>
-      //       <button onClick={() => addCart(product)}>Add Cart</button>
-      //     </div>
-      //   </div>
-      // </article>
 
+  
+  
+  const product = products.map(product => {    
+    return (
       <div className='product'>
         <div className='product-content'>
           <div class='product-img'>
@@ -53,12 +53,12 @@ const Product = () => {
                 <i class='fas fa-plus'></i>
               </span>
             </button>
-            <button type='button' class='btn-buy'>
-              buy now
+            <Button type="primary" class='btn-buy' onClick={()=>showModal(product.id)}>
+              Reviews
               <span>
                 <i class='fas fa-shopping-cart'></i>
               </span>
-            </button>
+            </Button>            
           </div>
         </div>
 
@@ -96,9 +96,13 @@ const Product = () => {
       </div>
     );
   });
+  
   return (
     <>
       <div className='product-items'>{product}</div>
+      <Modal title="Reviews" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>       
+        <Reviews />
+      </Modal>
     </>
   );
 };

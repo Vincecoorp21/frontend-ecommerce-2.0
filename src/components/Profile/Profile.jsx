@@ -1,29 +1,28 @@
+import { Button } from 'bootstrap';
 import { useContext, useEffect } from 'react';
-// import { OrdersContext } from '../../context/OrdersContext/OrdersState';
 import { UserContext } from '../../context/UserContext/UserState';
 import './Profile.scss';
 const URL_IMAGE = 'http://localhost:8000';
 const Profile = () => {
   const { getUserInfo, user, orderproduct } = useContext(UserContext);
-  // const { order, getOrder } = useContext(OrdersContext);
-  // console.log(orderproduct);
+  
   useEffect(() => {
     getUserInfo();
   }, []);
   if (!user) {
     return <span>Cargando...</span>;
   }
-  console.log(user.Order);
+  console.log(user);
   const listOrders = user.Orders.map((order, i) => {
-    console.info(order);
+    
     return (
       <div className='order-top' key={i}>
-        <span className='order-title'>Orden num {order.id}:</span>
+        <span className='order-title'>Orden num {order.order_num}:</span>
         <br />
         <div>
           <br />
           {order.Products.map(product => {
-            console.log(product);
+            console.log(product.product);
             return (
               <>
                 <ul>
@@ -40,33 +39,30 @@ const Profile = () => {
       </div>
     );
   });
-  console.log(listOrders);
+  // console.log(listOrders);
 
   return (
     <>
       <div class='card'>
-        <div
-          class='card-header'
-          styler='background-image: url(https://res.cloudinary.com/dj14cmwoz/image/upload/v1491077482/profile-card/images/profile-picture.png)'
-        >
+        <div class='card-header'>
           <div class='card-header-bar'>
-          <img src={URL_IMAGE + user.image_path}/>
-            <a href='#' class='btn-message'>
+          {/* <img src={URL_IMAGE + user.image_path}/> */}
+            {/* <a href='#' class='btn-message'>
               <span class='sr-only'>Message</span>
-            </a>
-            <a href='#' class='btn-menu'>
+            </a> */}
+            {/* <a href='#' class='btn-menu'>
               <span class='sr-only'>Menu</span>
-            </a>
+            </a> */}
           </div>
 
           <div class='card-header-slanted-edge'>
-            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 200'>
+            {/* <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 200'>
               <path class='polygon' d='M-20,200,1000,0V200Z' />
-            </svg>
+            </svg> */}
              
-            <a href='#' class='btn-follow'>
-              <span class='sr-only'>Follow</span>
-            </a>
+            {/* <Button variant="primary" onClick={this.onUpdateProfileHandler}></Button> */}
+              {/* <span class='sr-only'>Follow</span> */}
+            
           </div>
         </div>
         
@@ -74,7 +70,7 @@ const Profile = () => {
           <h2 class='name'>{user.name}</h2>
           <h4 class='job-title'>{user.email}</h4>
           <div class='bio'>
-            {listOrders}            
+            {/* {listOrders}             */}
           </div>
           <div class='social-accounts'>
             <a href='#'>
@@ -120,7 +116,7 @@ const Profile = () => {
         
       </div>
 
-      {/* <div>{listOrders}</div> */}
+      <div>{listOrders}</div>
     </>
   );
 };
