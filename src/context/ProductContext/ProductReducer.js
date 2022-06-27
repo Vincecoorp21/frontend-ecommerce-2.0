@@ -16,6 +16,11 @@ const products = (state, action) => {
         ...state,
         cart: [],
       };
+      case 'PRODUCT_ID':
+        return {
+          ...state,  
+          product: action.payload.productById,
+        };      
     default:
       return state;
   }
