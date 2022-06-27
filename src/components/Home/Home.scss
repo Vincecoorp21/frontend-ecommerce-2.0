@@ -69,11 +69,15 @@
 }
 .product-col-left {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)),
-    url('/assets/fashion-img-1.jpg') center/cover no-repeat;
+    url('/assets/smartphone_white.jpg') center/cover no-repeat;
 }
 .product-col-r-top {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)),
-    url('/assets/fashion-img-2.png') center/cover no-repeat;
+    url('/assets/laptops.jpg') center/cover no-repeat;
+}
+.product-col-r-top2 {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)),
+    url('/assets/ipad.jpg') center/cover no-repeat;
 }
 .flex {
   display: flex;
@@ -83,12 +87,7 @@
   padding: 2rem 1.5rem 3.2rem;
   margin: 5px;
 }
-.product-col-r-bottom > div:first-child {
-  background: #eaa001;
-}
-.product-col-r-bottom > div:last-child {
-  background: #0090ff;
-}
+
 .product-col-content {
   text-align: center;
   color: white;

@@ -26,8 +26,8 @@ const Home = () => {
           {/* <!-- product col left --> */}
           <div class='product-col-left flex'>
             <div class='product-col-content'>
-              <h2 class='sm-title'>men's shoes</h2>
-              <h2 class='md-title'>men's collection</h2>
+              <h2 class='sm-title'>SmartPhones</h2>
+              <h2 class='md-title'>SmartPhones</h2>
               <p class='text-light'>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Molestiae consequatur facilis eligendi quibusdam voluptatibus
@@ -44,8 +44,23 @@ const Home = () => {
           <div class='product-col-right'>
             <div class='product-col-r-top flex'>
               <div class='product-col-content'>
-                <h2 class='sm-title'>women's dresses</h2>
-                <h2 class='md-title'>women's collection</h2>
+                <h2 class='sm-title'>Laptops</h2>
+                <h2 class='md-title'>Laptops</h2>
+                <p class='text-light'>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Molestiae consequatur facilis eligendi quibusdam voluptatibus
+                  exercitationem autem voluptatum, beatae architecto odit,
+                  quisquam repellat. Deleniti, architecto ab.
+                </p>
+                <button type='button' class='btn-dark'>
+                  Shop now
+                </button>
+              </div>
+            </div>
+            <div class='product-col-r-top2 flex'>
+              <div class='product-col-content'>
+                <h2 class='sm-title'>Tablets</h2>
+                <h2 class='md-title'>Tablets</h2>
                 <p class='text-light'>
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Molestiae consequatur facilis eligendi quibusdam voluptatibus
