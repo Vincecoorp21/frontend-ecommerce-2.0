@@ -11,8 +11,8 @@ const Product = () => {
   const { products, getProducts, addCart, cart, getProductById } = useContext(ProductContext);
 
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const showModal = (id) => {
-    getProductById(id);    
+  const  showModal = async (id) => {
+    await getProductById(id);    
     setIsModalVisible(true);
   };
 
@@ -32,9 +32,9 @@ const Product = () => {
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart]);
-  console.log('cart', cart);
+  
   const product = products.map(product => {
-    console.log(product.Category.category);
+    
     return (
       // <article className='projects'>
       //   <div key={product.id} className='product-card'>
