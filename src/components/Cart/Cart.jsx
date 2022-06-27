@@ -5,13 +5,17 @@ import './Cart.scss';
 import { DeleteOutlined } from '@ant-design/icons';
 
 const Cart = () => {
-  const { cart, clearCart } = useContext(ProductContext);
+  const { cart, clearCart, deleteOne } = useContext(ProductContext);
   const { createOrder } = useContext(OrdersContext);
   const URL_IMAGE = 'http://localhost:8000';
 
   if (cart.length <= 0) {
     return <span>No tienes ningún producto añadido</span>;
   }
+
+  const clearProduct = i => {
+    deleteOne(i);
+  };
 
   const createNewOrder = () => {
     createOrder(cart);
@@ -30,7 +34,7 @@ const Cart = () => {
           <span>{cartItem2.product}</span>
           <span>{cartItem2.price.toFixed(2)} €</span>
           <span>
-            <button className='remove-item'>
+            <button className='remove-item' onClick={() => clearProduct(i)}>
               <DeleteOutlined />
             </button>
           </span>

@@ -1,11 +1,11 @@
-import { Button } from 'bootstrap';
+// import { Button } from 'bootstrap';
 import { useContext, useEffect } from 'react';
 import { UserContext } from '../../context/UserContext/UserState';
 import './Profile.scss';
 const URL_IMAGE = 'http://localhost:8000';
 const Profile = () => {
   const { getUserInfo, user, orderproduct } = useContext(UserContext);
-  
+
   useEffect(() => {
     getUserInfo();
   }, []);
@@ -14,7 +14,6 @@ const Profile = () => {
   }
   console.log(user);
   const listOrders = user.Orders.map((order, i) => {
-    
     return (
       <div className='order-top' key={i}>
         <span className='order-title'>Orden num {order.order_num}:</span>
@@ -46,7 +45,7 @@ const Profile = () => {
       <div class='card'>
         <div class='card-header'>
           <div class='card-header-bar'>
-          {/* <img src={URL_IMAGE + user.image_path}/> */}
+            {/* <img src={URL_IMAGE + user.image_path}/> */}
             {/* <a href='#' class='btn-message'>
               <span class='sr-only'>Message</span>
             </a> */}
@@ -59,19 +58,16 @@ const Profile = () => {
             {/* <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 200'>
               <path class='polygon' d='M-20,200,1000,0V200Z' />
             </svg> */}
-             
+
             {/* <Button variant="primary" onClick={this.onUpdateProfileHandler}></Button> */}
-              {/* <span class='sr-only'>Follow</span> */}
-            
+            {/* <span class='sr-only'>Follow</span> */}
           </div>
         </div>
-        
+
         <div class='card-body'>
           <h2 class='name'>{user.name}</h2>
           <h4 class='job-title'>{user.email}</h4>
-          <div class='bio'>
-            {/* {listOrders}             */}
-          </div>
+          <div class='bio'>{/* {listOrders}             */}</div>
           <div class='social-accounts'>
             <a href='#'>
               <img
@@ -113,7 +109,6 @@ const Profile = () => {
             </div>
           </div>
         </div>
-        
       </div>
 
       <div>{listOrders}</div>

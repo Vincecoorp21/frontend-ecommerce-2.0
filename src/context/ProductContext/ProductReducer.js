@@ -16,11 +16,17 @@ const products = (state, action) => {
         ...state,
         cart: [],
       };
-      case 'PRODUCT_ID':
-        return {
-          ...state,  
-          product: action.payload.productById,
-        };      
+    case 'PRODUCT_ID':
+      return {
+        ...state,
+        product: action.payload.productById,
+      };
+    case 'DELETE_ONE':
+      state.cart.splice(action.payload, 1);
+      return {
+        ...state,
+        cart: [...state.cart],
+      };
     default:
       return state;
   }
