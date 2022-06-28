@@ -55,30 +55,6 @@ const Profile = () => {
           <h2 class='name'>{user.name}</h2>
           <h4 class='job-title'>{user.email}</h4>
           <div>{listOrders}</div>
-
-          <div class='social-accounts'>
-            <a href='#'>
-              <img
-                src='https://res.cloudinary.com/dj14cmwoz/image/upload/v1491077480/profile-card/images/dribbble.svg'
-                alt=''
-              />
-              <span class='sr-only'>Dribbble</span>
-            </a>
-            <a href='#'>
-              <img
-                src='https://res.cloudinary.com/dj14cmwoz/image/upload/v1491077480/profile-card/images/twitter.svg'
-                alt=''
-              />
-              <span class='sr-only'>Twitter</span>
-            </a>
-            <a href='#'>
-              <img
-                src='https://res.cloudinary.com/dj14cmwoz/image/upload/v1491077480/profile-card/images/instagram.svg'
-                alt=''
-              />
-              <span class='sr-only'>Instagram</span>
-            </a>
-          </div>
         </div>
       </div>
     </>
