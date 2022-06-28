@@ -13,7 +13,7 @@ function Login() {
     login(values);
   };
   const onFinishFailed = errorInfo => {
-    console.log('Failed:', errorInfo);
+    console.error('Failed:', errorInfo);
   };
   useEffect(() => {
     setTimeout(() => {

@@ -9,17 +9,16 @@ function Register() {
 
   const navigate = useNavigate();
 
-  const onFinish = values => {
-    //console.log('Success:', values);
+  const onFinish = values => {    
     register(values);
-    // setTimeout(() => {
-    //   navigate('/');
-    //   //   clearMessage()
-    // }, 3000);
+    setTimeout(() => {
+      navigate('/');
+      clearMessage()
+    }, 3000);
   };
 
   const onFinishFailed = errorInfo => {
-    console.log('Failed:', errorInfo);
+    console.error('Failed:', errorInfo);
   };
 
   return (
