@@ -1,6 +1,7 @@
 // import { Button } from 'bootstrap';
 import { useContext, useEffect } from 'react';
 import { UserContext } from '../../context/UserContext/UserState';
+import { ProductContext } from '../../context/ProductContext/ProductState';
 import './Profile.scss';
 const URL_IMAGE = 'http://localhost:8000';
 
@@ -23,9 +24,14 @@ const Profile = () => {
           <br />
           {order.Products.map(product => {
             console.log(product);
+            const pic = product.image_path;
+
             return (
               <>
                 <ul>
+                  <li>
+                    <img className='pic-cart' src={URL_IMAGE + pic} alt='' />
+                  </li>
                   <li>{product.product} -</li>
                   <li>{product.price} €</li>
                 </ul>

@@ -28,9 +28,10 @@ body {
 .card {
   position: relative;
   width: 60vw; /* Remove for full width */
-  height: 50wh; /* Remove for full width */
+  /* Remove for full width */
   margin: 30px auto;
   box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);
+  height: 80vh;
 }
 .card-header {
   position: relative;
@@ -196,4 +197,5 @@ ul {
   display: flex;
   justify-content: center;
   gap: 10px;
+  align-items: center;
 }
