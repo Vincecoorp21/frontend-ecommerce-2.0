@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+<!-- LOGO -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img width="400" height="240" src='./src/assets/banner.jpg'>
+</p>
 
-## Available Scripts
+<!-- INDICE -->
+<details>
+  <summary>Indice</summary>
+  <ol>
+    <li>
+      <a href="#introducción">Introducción</a>
+      <ul>
+        <li><a href="#descripción">Tecnologías</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#descripción-del-proyecto">Descripción del proyecto</a>
+      <ul>
+        <li><a href="#instalación">Instalación</a></li>
+      </ul>
+    </li>    
+    <li><a href="#licencia">Licencia</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="#conocimientos">Conocimientos</a></li>
+  </ol>
+</details>
 
-In the project directory, you can run:
+<!-- SOBRE EL PROYECTO -->
 
-### `npm start`
+## Introducción
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+En este proyecto se unifica todo lo aprendido hasta ahora. Los alumnos desarrollarán un e-commerce donde los usuarios se registrarán, logearán , verán productos y crearán pedidos utilizando la API del e-commerce que crearon en el 1º Proyecto de backend.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+### Tecnologías
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Aquí presentamos las herramientas empleadas en este proyecto:
 
-### `npm run build`
+- [SCSS](https://sass-lang.com/)
+- [React](https://es.reactjs.org/)
+- [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript)
+- [AntDesign](https://ant.design/)
+- [Axios](https://github.com/axios/axios)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- DESCRIPCION -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Descripción
 
-### `npm run eject`
+¿Cuáles son los principales objetivos de este proyecto?
+  -  Comprender cómo desarrollar una aplicación con React
+  -  Mejora tus habilidades de desarrollo web
+  -  Mejore sus habilidades de desarrollo de JavaScript
+  -  Aprender a usar Context
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## FrontEnd E-commerce
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Una vez analizadas las necesidades del proyecto, se espera
+que el alumno desarrolle un frontend que sea capaz de lo siguiente:
+- Registro de usuarios.
+- Login de usuarios.
+- Que se puedan ver los productos  y añadir al carrito de compra
+- Que se pueda crear pedidos
+- Que en tu perfil puedas ver tus datos
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Requisitos imprescindibles del proyecto:
+- Uso de ramas con git, cuando se termine el proyecto deberán quedar dos ramas la master o main y la develop.
+- Presentación de README excelente.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Instalación
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Para la instalación de la aplicación has de clonarte el siguiente repositorio:
 
-### Code Splitting
+   ```sh
+   git clone https://github.com/Vincecoorp21/frontend-ecommerce-2.0.git
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Tambien has de instalar las dependencias del proyecto:
+   ```sh
+   npm install
+   ```
 
-### Analyzing the Bundle Size
+3. Iniciar proyecto:
+    ```sh
+    npm start
+   ```
+4. Para que el proyecto funcione hay que instalar el Backend clonando el siguiente repositorio:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    ```sh
+   git clone https://github.com/Vincecoorp21/BackendOnlineShop.git
+   ```
 
-### Making a Progressive Web App
+<!-- ROADMAP -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Experiencia
 
-### Advanced Configuration
+- [x] Implementado context
+- [x] Componentes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+<!-- LICENCIA -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Licencia
 
-### `npm run build` fails to minify
+Este programa es de código abierto y puede ser utilizado por cualquier persona que lo desee.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!-- CONTACTO -->
+
+## Contacto
+
+Vicente - [gitHub](https://github.com/Vincecoorp21)
+
+Jorge - [gitHub](https://github.com/yorch82)
+
+<!-- CONCOCIMIENTOS -->
+
+## Conocimientos
+
+- [x] React
+- [x] SCSS
+- [x] Context
