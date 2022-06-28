@@ -68,7 +68,43 @@ Requisitos imprescindibles del proyecto:
 - Uso de ramas con git, cuando se termine el proyecto deberán quedar dos ramas la master o main y la develop.
 - Presentación de README excelente.
 
+## GUÍA DE USO
 
+<br><br>
+
+Pantalla de inicio de la tienda
+
+
+![!foto](./src/assets/home.png)
+
+
+<br><br>
+
+El botón de Products en la barra de navegación nos muestra todos los productos disponibles en la tienda y la posibilidad de agregarlos al carrito o ver su valoración
+
+![foto](./src/assets/products.png)
+
+<br><br>
+
+Para poder comprar debes estar registrado y acceder a tu cuenta en Login y si no lo estás puedes registrarte desde el botón register
+
+![foto](./src/assets/register.png)
+![foto](./src/assets/login.png)
+
+<br><br>
+ 
+ Una vez hayas inciado sesión con tu cuenta te redigirá a la pantalla de tu perfil donde se muestran tanto tus datos como tus pedidos realizados.
+
+![foto](./src/assets/profile.png)
+
+<br><br>
+
+En el carrito verás los productos que hayas añadido y podrás finalizar la compra la cual se agregará a tu información de perfil.
+
+![foto](./src/assets/cart.png)
+
+
+<br>
 
 ### Instalación
 
