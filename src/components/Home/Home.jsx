@@ -4,23 +4,6 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    //
-    // <div className='hero-content'>
-    //   <h1 className='hero-title'>Welcome to My Personal Place</h1>
-    //   <h2 className='hero-subtitle'>
-    //     I'm <span>VinceBC</span>....a Fullstack Web Developer
-    //   </h2>
-    //   <button
-    //     type='button'
-    //     class='hero-button'
-    //     onClick="parent.location='/pages/aboutme.html'"
-    //   >
-    //     Welcome
-    //   </button>
-    // </div>
-    // <div>
-    //   <h1>Hola Home</h1>
-    // </div>
     <div className='product-collection'>
       <div className='container'>
         <div className='product-collection-wrapper'>
