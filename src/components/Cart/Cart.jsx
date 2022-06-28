@@ -44,16 +44,18 @@ const Cart = () => {
   });
   // console.log(cartItem);
   return (
-    <div className='global'>
-      <h3>Shopping Cart</h3>
-      {cartItem}
-      <div className='btn-cont'>
-        <button className='button-cart' onClick={() => clearCart()}>
-          Clear cart
-        </button>
-        <button className='button-cart' onClick={() => createNewOrder()}>
-          Create Order
-        </button>
+    <div className='divdiv'>
+      <div className='global'>
+        <h3>Shopping Cart</h3>
+        {cartItem}
+        <div className='btn-cont'>
+          <button className='button-cart' onClick={() => clearCart()}>
+            Clear cart
+          </button>
+          <button className='button-cart' onClick={() => createNewOrder()}>
+            Create Order
+          </button>
+        </div>
       </div>
     </div>
   );
