@@ -9,11 +9,11 @@ function Register() {
 
   const navigate = useNavigate();
 
-  const onFinish = values => {    
+  const onFinish = values => {
     register(values);
     setTimeout(() => {
       navigate('/');
-      clearMessage()
+      // clearMessage();
     }, 3000);
   };
 
