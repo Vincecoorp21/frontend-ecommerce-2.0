@@ -35,6 +35,7 @@ function Login() {
         onFinishFailed={onFinishFailed}
         autoComplete='off'
       >
+        <h2 className='login-title'>Login Form</h2>
         {/* < className='inside_form'> */}
         {/* <h3 className='login-title'>Welcome</h3> */}
         <Form.Item

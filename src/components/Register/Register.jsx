@@ -40,6 +40,7 @@ function Register() {
         onFinishFailed={onFinishFailed}
         autoComplete='off'
       >
+        <h2 className='login-title'>Register Form</h2>
         <div className='prueba'>
           <Form.Item
             label='Username'
