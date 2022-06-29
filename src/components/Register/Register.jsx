@@ -13,7 +13,7 @@ function Register() {
     register(values);
     setTimeout(() => {
       navigate('/');
-      clearMessage()
+      // clearMessage()
     }, 3000);
   };
 
