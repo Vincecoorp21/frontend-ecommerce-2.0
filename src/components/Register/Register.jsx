@@ -9,11 +9,15 @@ function Register() {
 
   const navigate = useNavigate();
 
-  const onFinish = values => {    
+  const onFinish = values => {
     register(values);
     setTimeout(() => {
       navigate('/');
+<<<<<<< HEAD
       // clearMessage()
+=======
+      // clearMessage();
+>>>>>>> 534bb6058f89833163eb6d56a9d7565bf9986729
     }, 3000);
   };
 
